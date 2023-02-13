@@ -22,6 +22,10 @@ public class Pizza {
             this.price = 400;
             this.toppings = 120;
         }
+        this.isBillCreated = false;
+        this.isTakeAway = false;
+        this.isexteraToppingAdded = false;
+        this.isExteraCheseAdded = false;
         this.bill = "Base Price Of The Pizza: "+this.price+"\n";
         // your code goes here
     }
@@ -57,7 +61,7 @@ public class Pizza {
     public String getBill(){
         // your code goes here
         if(!isBillCreated) {
-            if (!isExteraCheseAdded) {
+            if (isExteraCheseAdded) {
                 this.bill += "Extra Cheese Added: 80" + "\n";
             }
             if (!isexteraToppingAdded) {
